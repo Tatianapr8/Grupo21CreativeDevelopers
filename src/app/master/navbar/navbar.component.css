@@ -1,0 +1,15 @@
+.navbar{
+  background-color: #ffe;
+}
+
+a
+{
+  color: black;
+}
+a:hover{
+  color: #444;
+}
+a:active
+{
+  color: #777;
+}

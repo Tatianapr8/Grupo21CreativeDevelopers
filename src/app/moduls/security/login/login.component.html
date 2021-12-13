@@ -1,0 +1,79 @@
+<form [formGroup]="login_form">
+    <div class="body">
+        <div class="container-fluid pt-4 pb-2">
+                <div class="container shadow justify-content-center mb-4 form">
+                <div class="row justify-content-center mb-2 head-form">
+                    <div class="col-2 mb-2 text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="" class="mt-4 bi bi-person-circle" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                        </svg>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col text-center">
+                            <h2 class="">Login</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <div class="col">
+                        <input 
+                            type="text"
+                            formControlName="email"
+                            class="form-control"
+                            placeholder="Correo Electronico"
+                            [ngClass]="{ 'is-invalid': GetForm['email'].errors }"
+                        />
+                        <div *ngIf="GetForm['email'].errors" class="invalid-feedback">
+                            <div *ngIf="GetForm['email'].errors['required']">Valor requerido</div>
+                            <div *ngIf="GetForm['email'].errors['email']">Correo inválido</div>
+                          </div>
+                    </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <div class="col">
+                        <input 
+                            type="password"
+                            formControlName="password"
+                            class="form-control"
+                            placeholder="Contraseña"
+                            [ngClass]="{ 'is-invalid': GetForm['password'].errors }"
+                        />
+                        <div *ngIf="GetForm['password'].errors" class="invalid-feedback">
+                            <div *ngIf="GetForm['password'].errors['required']">
+                              Valor requerido
+                            </div>
+                            <div *ngIf="GetForm['password'].errors['minlength']">
+                              La contraseña debe tener como mínimo 8 caracteres
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                
+                <div class="form-group row mb-4">
+                    <label for="inputEmail" class="col-form-label"></label>
+                    <div class="col">
+                        <button 
+                            [disabled]="GetForm['email'].errors || GetForm['password'].errors"                            
+                            type="submit"
+                            (click)="Login()"
+                            name="btn_login"
+                            class="enviar">Iniciar Sesión</button>
+                    </div>
+                    <div>
+                        <label style="float: right">
+                            <a routerLink="/security/recovery-password">
+                                <b>¿Olvido su Contraseña?</b>
+                            </a>                
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <img src="http://princesspetshop.com.co/img/foot.png" alt="" width="440px" class="foot">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

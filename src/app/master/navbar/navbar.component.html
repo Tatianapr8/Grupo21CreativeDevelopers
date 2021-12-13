@@ -1,0 +1,64 @@
+<head>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg ">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="https://ficciinterruptus.com/wp-content/uploads/2021/12/Logo.png" width="60px" alt="">
+      </a>
+      <img src="https://gator3041.hostgator.com:2083/cpsess0990986558/viewer/home4%2fanthonyjdiaz%2fpublic_html%2fimg/Logo.png" alt="" width="120px">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="home">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="#">Ordenes</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Productos
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" routerLink="administration/product-create">Crear</a></li>
+              <li><a class="dropdown-item" routerLink="administration/product-edit">Editar</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" routerLink="administration/product-list">Listar</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Usuarios
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" routerLink="administration/user-create">Crear</a></li>
+              <li><a class="dropdown-item" routerLink="administration/user-edit">Editar</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" routerLink="administration/user-list">Listar</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" routerLink="parameters/category-list" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Categorias
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" routerLink="parameters/category-create">Crear</a></li>
+              <li><a class="dropdown-item" routerLink="parameters/category-edit">Editar</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" routerLink="parameters/category-remove">Eliminar</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+          <button class="btn me-2" type="submit"> <i class="fas fa-search"></i></button>
+          <button class="btn " type="menu" > <a routerLink="/security/login"><i class=" fas fa-sign-in-alt"></i></a></button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</body>
